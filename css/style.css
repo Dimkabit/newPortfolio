@@ -608,7 +608,12 @@ body {
   -o-transition: border 0.4s;
   transition: border 0.4s;
 }
-
+.services__card > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: hsl(228, 8%, 65%);
+}
 .services__title {
   font-size: 1.25rem;
   color: hsl(228, 8%, 95%);
@@ -1125,7 +1130,7 @@ textarea:focus {
   .services__card {
     padding: 3.5rem 2rem;
   }
-
+ 
   .progects-block.container-grid {
     -ms-grid-columns: (450px)[3];
     grid-template-columns: repeat(3, 450px);
