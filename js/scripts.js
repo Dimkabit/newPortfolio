@@ -13,31 +13,41 @@
 		window.addEventListener('scroll', blurHeader);
 
       //email 
-	// 	const contactForm = document.getElementById('contact-form'),
-   //    contactMessage = document.getElementById('contact-massage');
+		const contactForm = document.getElementById('contact-form'),
+      contactMessage = document.getElementById('contact-massage');
 
-   // const sendEmail = (e) => {
-   //    e.preventDefault();
-   //    // serviceID - templateID - #form - publicKey
-   //    emailjs.sendForm('service_opvkame', 'template_pecfgd1', '#contact-form', 'n4QKi07qTKpXJTOvf')
-   //       .then(() => {
-   //          // Show sent message
-   //          contactMessage.textContent = 'Message sent successfully ✅'
+   const sendEmail = (e) => {
+      e.preventDefault();
+      // serviceID - templateID - #form - publicKey
+      emailjs.sendForm('service_cvyb6jm', 'template_z4hgv98', '#contact-form', 'ZMPwEok5ABBA4iHG8')
+         .then(() => {
+            // Show sent message
+            contactMessage.textContent = 'Message sent successfully ✅'
 
-   //          // Remove message after five seconds
-   //          setTimeout(() => {
-   //             contactMessage.textContent = ''
-   //          }, 5000)
+            // Remove message after five seconds
+            setTimeout(() => {
+               contactMessage.textContent = ''
+            }, 5000)
 
-   //          // Clear input fields
-   //          contactForm.reset()
+            // Clear input fields
+            contactForm.reset()
 
-   //       }, () => {
-   //          // Show error message
-   //          contactMessage.textContent = 'Message not sent (service error) ❌'
-   //       })
-   // };
-   // contactForm.addEventListener('submit', sendEmail);
+         }, () => {
+            // Show error message
+            contactMessage.textContent = 'Message not sent (service error) ❌'
+         })
+   };
+   contactForm.addEventListener('submit', sendEmail);
+
+   // function sendMail() {
+   //    let params = {
+   //       name: document.getElementById("user_name").value,
+   //       email: document.getElementById("user_email").value,
+   //       message: document.getElementById("user_project").value
+   //    }
+
+   //    emailjs.send("service_cvyb6jm", "template_z4hgv98", params).then(alert("Email"))
+   // }
 
 
    //scroll sections active link
