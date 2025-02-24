@@ -392,19 +392,19 @@
 	<script src="js/scripts.js"></script>
 	<script>
 		document.getElementById('contact-form').addEventListener('submit', async function (event) {
-	event.preventDefault();
+		event.preventDefault();
 
-	let formData = new FormData(this);
-	
-	let response = await fetch(this.action, {
-		 method: 'POST', // Убедитесь, что сервер принимает POST-запрос
-		 body: formData
+		let formData = new FormData(this);
+		
+		let response = await fetch(this.action, {
+			method: 'POST', // Убедитесь, что сервер принимает POST-запрос
+			body: formData
+		});
+
+		let result = await response.json();
+		
+		document.getElementById('contact-message').textContent = result.message;
 	});
-
-	let result = await response.json();
-	
-	document.getElementById('contact-message').textContent = result.message;
-});
 </script>
 </body>
 
