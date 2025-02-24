@@ -13,31 +13,31 @@
 		window.addEventListener('scroll', blurHeader);
 
       //email 
-		const contactForm = document.getElementById('contact-form'),
-      contactMessage = document.getElementById('contact-massage');
+	// 	const contactForm = document.getElementById('contact-form'),
+   //    contactMessage = document.getElementById('contact-massage');
 
-   const sendEmail = (e) => {
-      e.preventDefault();
-      // serviceID - templateID - #form - publicKey
-      emailjs.sendForm('service_opvkame', 'template_pecfgd1', '#contact-form', 'n4QKi07qTKpXJTOvf')
-         .then(() => {
-            // Show sent message
-            contactMessage.textContent = 'Message sent successfully ✅'
+   // const sendEmail = (e) => {
+   //    e.preventDefault();
+   //    // serviceID - templateID - #form - publicKey
+   //    emailjs.sendForm('service_opvkame', 'template_pecfgd1', '#contact-form', 'n4QKi07qTKpXJTOvf')
+   //       .then(() => {
+   //          // Show sent message
+   //          contactMessage.textContent = 'Message sent successfully ✅'
 
-            // Remove message after five seconds
-            setTimeout(() => {
-               contactMessage.textContent = ''
-            }, 5000)
+   //          // Remove message after five seconds
+   //          setTimeout(() => {
+   //             contactMessage.textContent = ''
+   //          }, 5000)
 
-            // Clear input fields
-            contactForm.reset()
+   //          // Clear input fields
+   //          contactForm.reset()
 
-         }, () => {
-            // Show error message
-            contactMessage.textContent = 'Message not sent (service error) ❌'
-         })
-   };
-   contactForm.addEventListener('submit', sendEmail);
+   //       }, () => {
+   //          // Show error message
+   //          contactMessage.textContent = 'Message not sent (service error) ❌'
+   //       })
+   // };
+   // contactForm.addEventListener('submit', sendEmail);
 
 
    //scroll sections active link
