@@ -234,7 +234,14 @@ body {
   z-index: -1;
 }
 
-
+.nav__toggle {
+  transition: all ease .3s;
+  pointer-events: fill;
+}
+.menu-open .nav__toggle {
+  opacity: 0;
+  pointer-events: none;
+}
 .footer {
   background-color: hsl(228, 15%, 15%);
   padding-block: 3.5rem 2rem;

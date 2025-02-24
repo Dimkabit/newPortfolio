@@ -25,14 +25,17 @@
     const navMenu = document.getElementById("nav-menu"), navToggle = document.getElementById("nav-toggle"), navClose = document.getElementById("nav-close");
     if (navToggle) navToggle.addEventListener("click", (() => {
         navMenu.classList.add("show-menu");
+        document.documentElement.classList.add("menu-open");
     }));
     if (navClose) navClose.addEventListener("click", (() => {
         navMenu.classList.remove("show-menu");
+        document.documentElement.classList.remove("menu-open");
     }));
     const navLink = document.querySelectorAll(".nav__link");
     const linkActtion = () => {
         const navMenu = document.getElementById("nav-menu");
         navMenu.classList.remove("show-menu");
+        document.documentElement.classList.remove("menu-open");
     };
     navLink.forEach((n => n.addEventListener("click", linkActtion)));
 
